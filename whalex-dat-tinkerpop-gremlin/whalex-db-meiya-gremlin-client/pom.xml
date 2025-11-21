@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.meiya.whalex</groupId>
+        <artifactId>whalex-dat-tinkerpop-gremlin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>whalex-db-meiya-gremlin-client</artifactId>
+
+    <properties>
+        <gremlin.version>3.7.3</gremlin.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-base-gremlin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>gremlin-shaded</artifactId>
+                    <groupId>org.apache.tinkerpop</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>gremlin-core</artifactId>
+                    <groupId>org.apache.tinkerpop</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>gremlin-driver</artifactId>
+                    <groupId>org.apache.tinkerpop</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-driver</artifactId>
+            <version>${gremlin.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 打包插件 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
+
+</project>

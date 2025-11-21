@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>whalex-data-driver</artifactId>
+        <groupId>com.meiya.whalex</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>whalex-db-base-s3</artifactId>
+    <groupId>com.meiya.whalex</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>whalex-db-base-s3</name>
+    <description>云平台-底层 S3 服务模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-abstract</artifactId>
+            <version>${whalex-db-abstract.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.11.415</version>
+        </dependency>
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-dat-filesystem</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <parent>
+        <artifactId>whalex-dat-mysql</artifactId>
+        <groupId>com.meiya.whalex</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>whalex-db-meiya-gbase</artifactId>
+
+    <name>whalex-db-meiya-gbase</name>
+    <description>云平台-底层 gbase 服务模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-base-mysql</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esen.jdbc</groupId>
+            <artifactId>gbase</artifactId>
+            <version>8.3.81.53</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

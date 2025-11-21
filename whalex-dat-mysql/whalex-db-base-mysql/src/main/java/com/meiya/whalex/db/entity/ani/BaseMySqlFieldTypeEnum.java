@@ -1,0 +1,243 @@
+package com.meiya.whalex.db.entity.ani;
+
+import com.meiya.whalex.db.entity.FieldTypeAdapter;
+import com.meiya.whalex.interior.db.constant.ItemFieldTypeEnum;
+
+/**
+ * MySql 字段枚举
+ *
+ * @author 黄河森
+ * @date 2019/12/24
+ * @project whale-cloud-platformX
+ */
+public enum BaseMySqlFieldTypeEnum implements FieldTypeAdapter {
+
+    //------- 整数类型 -------//
+
+    TINYINT("tinyint", ItemFieldTypeEnum.TINYINT, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, true),
+
+    SMALLINT("smallint", ItemFieldTypeEnum.SMALLINT, null, null,ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, true),
+
+    MEDIUMINT("mediumint", ItemFieldTypeEnum.MEDIUMINT, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, true),
+
+    INTEGER("int", ItemFieldTypeEnum.INTEGER, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, true),
+
+    LONG("bigint", ItemFieldTypeEnum.LONG, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, true),
+
+    //------- 浮点数类型 -------//
+
+    REAL("real", ItemFieldTypeEnum.REAL, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.SHOULD, true),
+
+    FLOAT("float", ItemFieldTypeEnum.FLOAT, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.SHOULD, true),
+
+    DOUBLE("double", ItemFieldTypeEnum.DOUBLE, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.SHOULD, true),
+
+    //------- 定点数类型 -------//
+
+    DECIMAL("decimal", ItemFieldTypeEnum.DECIMAL, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.SHOULD, false),
+
+    NUMERIC("decimal", ItemFieldTypeEnum.NUMERIC, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.SHOULD, false),
+
+    //------- 货币类型 -------//
+    MONEY("decimal", ItemFieldTypeEnum.MONEY, 17, 2, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.MUST, false),
+
+    //------- 位类型 -------//
+
+    BIT("bit", ItemFieldTypeEnum.BIT, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 日期类型 -------//
+
+    YEAR("year", ItemFieldTypeEnum.YEAR, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    DATE("date", ItemFieldTypeEnum.DATE, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    DATETIME("datetime", ItemFieldTypeEnum.DATETIME, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    DATETIME_2("datetime", ItemFieldTypeEnum.TIME, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    TIME("Time", ItemFieldTypeEnum.SMART_TIME, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    TIMESTAMP("timestamp", ItemFieldTypeEnum.TIMESTAMP, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 文本类型 -------//
+
+    CHAR("char", ItemFieldTypeEnum.CHAR, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    STRING("varchar", ItemFieldTypeEnum.STRING, 1000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    TINYTEXT("tinytext", ItemFieldTypeEnum.TINYTEXT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    TEXT("text", ItemFieldTypeEnum.TEXT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    MEDIUMTEXT("mediumtext", ItemFieldTypeEnum.MEDIUMTEXT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    LONGTEXT("longtext", ItemFieldTypeEnum.LONGTEXT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 枚举类型 -------//
+
+    ENUM("enum", ItemFieldTypeEnum.ENUM, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 多选值类型 -------//
+
+    SET("set", ItemFieldTypeEnum.SET, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 二进制字符串类型 -------//
+
+    BINARY("binary", ItemFieldTypeEnum.BINARY, null, null, ItemFieldTypeEnum.ParamStatus.SHOULD, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    VARBINARY("varbinary", ItemFieldTypeEnum.VARBINARY, 1000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 二进制大对象 -------//
+
+    BLOB("blob", ItemFieldTypeEnum.BLOB, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    BYTES("blob", ItemFieldTypeEnum.BYTES, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    TINYBLOB("tinyblob", ItemFieldTypeEnum.TINYBLOB, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    MEDIUMBLOB("mediumblob", ItemFieldTypeEnum.MEDIUMBLOB, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    LONGBLOB("longblob", ItemFieldTypeEnum.LONGBLOB, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    IMAGE("mediumblob", ItemFieldTypeEnum.IMAGE, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- JSON 类型 -------//
+
+    JSON("json", ItemFieldTypeEnum.OBJECT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 地理位置 -------//
+
+    POINT("point", ItemFieldTypeEnum.POINT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 布尔类型 -------//
+
+    BOOLEAN("tinyint", ItemFieldTypeEnum.BOOLEAN, 1, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    //------- 集合类型 -------//
+
+    ARRAY("varchar", ItemFieldTypeEnum.ARRAY, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_TINYINT("varchar", ItemFieldTypeEnum.ARRAY_TINYINT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_SMALLINT("varchar", ItemFieldTypeEnum.ARRAY_SMALLINT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_MEDIUMINT("varchar", ItemFieldTypeEnum.ARRAY_MEDIUMINT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_INTEGER("varchar", ItemFieldTypeEnum.ARRAY_INTEGER, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_LONG("varchar", ItemFieldTypeEnum.ARRAY_LONG, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_FLOAT("varchar", ItemFieldTypeEnum.ARRAY_FLOAT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_DOUBLE("varchar", ItemFieldTypeEnum.ARRAY_DOUBLE, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_NUMERIC("varchar", ItemFieldTypeEnum.ARRAY_NUMERIC, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    ARRAY_DECIMAL("varchar", ItemFieldTypeEnum.ARRAY_DECIMAL, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_BIT("varchar", ItemFieldTypeEnum.ARRAY_BIT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_CHAR("varchar", ItemFieldTypeEnum.ARRAY_CHAR, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_STRING("varchar", ItemFieldTypeEnum.ARRAY_STRING, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_TINYTEXT("varchar", ItemFieldTypeEnum.ARRAY_TINYTEXT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_TEXT("varchar", ItemFieldTypeEnum.ARRAY_TEXT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_MEDIUMTEXT("varchar", ItemFieldTypeEnum.ARRAY_MEDIUMTEXT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_LONGTEXT("varchar", ItemFieldTypeEnum.ARRAY_LONGTEXT, 5000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false),
+    ARRAY_POINT("multipoint", ItemFieldTypeEnum.ARRAY_POINT, null, null, ItemFieldTypeEnum.ParamStatus.NO, ItemFieldTypeEnum.ParamStatus.NO, false),
+
+    NONE("varchar", ItemFieldTypeEnum.NONE, 1000, null, ItemFieldTypeEnum.ParamStatus.MUST, ItemFieldTypeEnum.ParamStatus.NO, false);
+
+
+    private String dbFieldType;
+
+    private ItemFieldTypeEnum fieldType;
+
+    private Integer filedLength;
+
+    private Integer fieldDecimalPoint;
+
+    private ItemFieldTypeEnum.ParamStatus dataLength;
+
+    private ItemFieldTypeEnum.ParamStatus dataDecimalPoint;
+
+    private boolean unsigned;
+
+    @Override
+    public String getDbFieldType() {
+        return dbFieldType;
+    }
+
+    @Override
+    public ItemFieldTypeEnum getFieldType() {
+        return fieldType;
+    }
+
+    @Override
+    public Integer getFiledLength() {
+        return filedLength;
+    }
+
+    @Override
+    public Integer getFieldDecimalPoint() {
+        return fieldDecimalPoint;
+    }
+
+    @Override
+    public ItemFieldTypeEnum.ParamStatus getNeedDataLength() {
+        return dataLength;
+    }
+
+    @Override
+    public ItemFieldTypeEnum.ParamStatus getNeedDataDecimalPoint() {
+        return dataDecimalPoint;
+    }
+
+    @Override
+    public boolean isUnsigned() {
+        return unsigned;
+    }
+
+    BaseMySqlFieldTypeEnum(String dbFieldType, ItemFieldTypeEnum fieldType, Integer filedLength, Integer fieldDecimalPoint, ItemFieldTypeEnum.ParamStatus dataLength, ItemFieldTypeEnum.ParamStatus dataDecimalPoint, boolean unsigned) {
+        this.dbFieldType = dbFieldType;
+        this.fieldType = fieldType;
+        this.filedLength = filedLength;
+        this.fieldDecimalPoint = fieldDecimalPoint;
+        this.dataLength = dataLength;
+        this.dataDecimalPoint = dataDecimalPoint;
+        this.unsigned = unsigned;
+    }
+
+    public static BaseMySqlFieldTypeEnum findFieldTypeEnum(String fieldTypeStr) {
+        BaseMySqlFieldTypeEnum result = null;
+        ItemFieldTypeEnum fieldType = ItemFieldTypeEnum.findFieldTypeEnum(fieldTypeStr);
+        for (BaseMySqlFieldTypeEnum fieldTypeEnum : BaseMySqlFieldTypeEnum.values()) {
+            if (fieldType.equals(fieldTypeEnum.fieldType)) {
+                result = fieldTypeEnum;
+                break;
+            }
+        }
+        if (result == null) {
+            result = NONE;
+        }
+        return result;
+    }
+
+    public static ItemFieldTypeEnum dbFieldType2FieldType(String dbFieldType, Integer fieldLength, boolean bit1isBoolean) {
+        ItemFieldTypeEnum result = null;
+        for (BaseMySqlFieldTypeEnum fieldTypeEnum : BaseMySqlFieldTypeEnum.values()) {
+            if (dbFieldType.equalsIgnoreCase(fieldTypeEnum.dbFieldType)) {
+                if (fieldTypeEnum.equals(BaseMySqlFieldTypeEnum.BIT)) {
+                    if (fieldLength != null && fieldLength == 1 && bit1isBoolean) {
+                        result = BaseMySqlFieldTypeEnum.BOOLEAN.fieldType;
+                    } else {
+                        result = fieldTypeEnum.fieldType;
+                    }
+                } else if (fieldTypeEnum.equals(BaseMySqlFieldTypeEnum.BOOLEAN)) {
+                    if (fieldLength != null && fieldLength == 1) {
+                        result = BaseMySqlFieldTypeEnum.BOOLEAN.fieldType;
+                    } else {
+                        result = BaseMySqlFieldTypeEnum.TINYINT.fieldType;
+                    }
+                } else {
+                    result = fieldTypeEnum.fieldType;
+                }
+                break;
+            }
+        }
+        if (result == null) {
+            result = NONE.fieldType;
+        }
+        return result;
+    }
+
+}

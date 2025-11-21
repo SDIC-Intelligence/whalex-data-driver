@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.MySqlServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.MySqlConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.MySqlParamUtil

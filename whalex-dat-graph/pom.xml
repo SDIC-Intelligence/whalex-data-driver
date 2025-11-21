@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>whalex-data-driver</artifactId>
+        <groupId>com.meiya.whalex</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>whalex-dat-graph</artifactId>
+    <groupId>com.meiya.whalex</groupId>
+    <packaging>jar</packaging>
+    <version>${whalex-dat-graph.version}</version>
+    <name>whalex-dat-graph</name>
+
+    <properties>
+        <gremlin.version>3.6.2</gremlin.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-abstract</artifactId>
+            <version>${whalex-db-abstract.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-core</artifactId>
+            <version>${gremlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-driver</artifactId>
+            <version>${gremlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.10.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

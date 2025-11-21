@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.file.FtpServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.file.FtpConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.file.FtpParamUtil

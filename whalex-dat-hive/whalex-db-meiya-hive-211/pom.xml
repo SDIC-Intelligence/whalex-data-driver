@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>whalex-data-driver</artifactId>
+        <groupId>com.meiya.whalex</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>whalex-db-meiya-hive-211</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-base-hive</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>hive-jdbc</artifactId>
+                    <groupId>org.apache.hive</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>hive-shims-common</artifactId>
+                    <groupId>org.apache.hive.shims</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <artifactId>hive-jdbc</artifactId>
+            <groupId>org.apache.hive</groupId>
+            <version>2.1.1</version>
+        </dependency>
+    </dependencies>
+
+</project>

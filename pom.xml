@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.meiya.whalex</groupId>
+    <artifactId>whalex-data-driver</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>whalex-data-driver</name>
+    <description>whaleX 数据驱动</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <hutool.version>5.7.19</hutool.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<!--        <skipTests>true</skipTests>-->
+
+        <!-- 版本管理 -->
+        <whalex-data-common.version>0.0.1-SNAPSHOT</whalex-data-common.version>
+        <whalex-data-modal.version>0.0.1-SNAPSHOT</whalex-data-modal.version>
+        <whalex-db-abstract.version>0.0.1-SNAPSHOT</whalex-db-abstract.version>
+        <whalex-db-rdbms.version>0.0.1-SNAPSHOT</whalex-db-rdbms.version>
+        <whalex-dat-graph.version>0.0.1-SNAPSHOT</whalex-dat-graph.version>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>base-driver</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-dat-graph</module>
+                <module>whalex-dat-filesystem</module>
+                <module>whalex-dat-cache</module>
+                <module>whalex-dat-hive</module>
+                <module>whalex-dat-mysql</module>
+                <module>whalex-dat-redis</module>
+                <module>whalex-dat-mpp</module>
+                <module>whalex-dat-mongo-3x</module>
+                <module>whalex-dat-mongo-4x</module>
+                <module>whalex-dat-hbase-1x</module>
+                <module>whalex-dat-hbase-2x</module>
+                <module>whalex-dat-es-6x</module>
+                <module>whalex-dat-es-7x</module>
+                <module>whalex-dat-hadoop</module>
+                <module>whalex-dat-oracle</module>
+                <module>whalex-dat-kafka</module>
+                <module>whalex-dat-s3</module>
+                <module>whalex-dat-dm</module>
+                <module>whalex-dat-tinkerpop-gremlin</module>
+                <module>whalex-dat-ftp</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>sql</id>
+            <modules>
+                <module>whalex-dat-sql-to-dsl</module>
+                <module>whalex-dat-sql</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>all</id>
+            <!-- 模块管理 -->
+            <modules>
+                <!-- 基础模块 -->
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-graph</module>
+                <!-- mysql-->
+                <module>whalex-dat-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-tidb</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-doris</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-gbase</module>
+
+                <module>whalex-dat-cache</module>
+                <module>whalex-dat-redis</module>
+                <module>whalex-dat-redis/whalex-db-meiya-redis</module>
+                <module>whalex-db-meiya-neo4j</module>
+                <!-- mongo -->
+                <module>whalex-dat-mongo-3x</module>
+                <module>whalex-dat-mongo-3x/whalex-db-meiya-mongo</module>
+                <module>whalex-dat-mongo-4x</module>
+                <module>whalex-dat-mongo-4x/whalex-db-meiya-mongo-4x</module>
+                <!-- mpp -->
+                <module>whalex-dat-mpp</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-greenplum</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-postgre</module>
+                <module>whalex-dat-mpp/whalex-db-kingbase-kingbasees</module>
+                <module>whalex-dat-mpp/whalex-db-h3c-vertica</module>
+                <module>whalex-dat-mpp/whalex-db-highgo-highgodb</module>
+                <!-- HBase 1x-->
+                <module>whalex-dat-hbase-1x</module>
+                <module>whalex-dat-hbase-1x/whalex-db-meiya-hbase-1.3.1</module>
+                <!-- es6 -->
+                <module>whalex-dat-es-6x</module>
+                <module>whalex-dat-es-6x/whalex-db-meiya-es-6x</module>
+                <!-- hive -->
+                <module>whalex-dat-hive</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-310</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-121</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-211</module>
+                <!-- HBase 2x -->
+                <module>whalex-dat-hbase-2x</module>
+                <module>whalex-dat-hbase-2x/whalex-db-meiya-hbase-2.0.0</module>
+                <!-- es 7 -->
+                <module>whalex-dat-es-7x</module>
+                <module>whalex-dat-es-7x/whalex-db-meiya-es-7x</module>
+                <!-- hadoop -->
+                <module>whalex-dat-filesystem</module>
+                <module>whalex-dat-hadoop</module>
+                <module>whalex-dat-hadoop/whalex-db-meiya-hadoop</module>
+                <!-- oracle -->
+                <module>whalex-dat-oracle</module>
+                <module>whalex-dat-oracle/whalex-db-meiya-oracle</module>
+                <!-- kafka -->
+                <module>whalex-dat-kafka</module>
+                <module>whalex-dat-kafka/whalex-db-meiya-kafka</module>
+                <module>whalex-dat-dm</module>
+                <module>whalex-dat-dm/whalex-db-meiya-dm-7</module>
+                <module>whalex-dat-tinkerpop-gremlin</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-janusgraph</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-gremlin-client</module>
+                <module>whalex-dat-sql-to-dsl</module>
+                <module>whalex-dat-sql</module>
+                <module>whalex-db-clickhouse</module>
+                <module>whalex-db-meiya-nebulagraph</module>
+                <module>whalex-dat-s3</module>
+                <module>whalex-dat-ftp</module>
+                <module>whalex-dat-ftp/whalex-db-meiya-ftp</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>open-database</id>
+            <!-- 模块管理 -->
+            <modules>
+                <!-- 基础模块 -->
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-graph</module>
+                <module>whalex-dat-sql-to-dsl</module>
+                <module>whalex-dat-sql</module>
+                <!-- mysql-->
+                <module>whalex-dat-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-tidb</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-doris</module>
+
+                <module>whalex-dat-cache</module>
+                <module>whalex-dat-redis</module>
+                <module>whalex-dat-redis/whalex-db-meiya-redis</module>
+                <module>whalex-db-meiya-neo4j</module>
+                <!-- mongo -->
+                <module>whalex-dat-mongo-3x</module>
+                <module>whalex-dat-mongo-3x/whalex-db-meiya-mongo</module>
+                <module>whalex-dat-mongo-4x</module>
+                <module>whalex-dat-mongo-4x/whalex-db-meiya-mongo-4x</module>
+                <!-- mpp -->
+                <module>whalex-dat-mpp</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-greenplum</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-postgre</module>
+                <!-- HBase 1x-->
+                <module>whalex-dat-hbase-1x</module>
+                <module>whalex-dat-hbase-1x/whalex-db-meiya-hbase-1.3.1</module>
+                <!-- es6 -->
+                <module>whalex-dat-es-6x</module>
+                <module>whalex-dat-es-6x/whalex-db-meiya-es-6x</module>
+                <!-- hive -->
+                <module>whalex-dat-hive</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-310</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-121</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-211</module>
+                <!-- HBase 2x -->
+                <module>whalex-dat-hbase-2x</module>
+                <module>whalex-dat-hbase-2x/whalex-db-meiya-hbase-2.0.0</module>
+                <!-- es 7 -->
+                <module>whalex-dat-es-7x</module>
+                <module>whalex-dat-es-7x/whalex-db-meiya-es-7x</module>
+                <!-- hadoop -->
+                <module>whalex-dat-filesystem</module>
+                <module>whalex-dat-hadoop</module>
+                <module>whalex-dat-hadoop/whalex-db-meiya-hadoop</module>
+                <!-- oracle -->
+                <module>whalex-dat-oracle</module>
+                <module>whalex-dat-oracle/whalex-db-meiya-oracle</module>
+                <!-- kafka -->
+                <module>whalex-dat-kafka</module>
+                <module>whalex-dat-kafka/whalex-db-meiya-kafka</module>
+                <module>whalex-dat-tinkerpop-gremlin</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-janusgraph</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-gremlin-client</module>
+                <module>whalex-db-clickhouse</module>
+                <module>whalex-db-meiya-nebulagraph</module>
+                <module>whalex-dat-s3</module>
+                <module>whalex-dat-ftp</module>
+                <module>whalex-dat-ftp/whalex-db-meiya-ftp</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>xc-database</id>
+            <!-- 模块管理 -->
+            <modules>
+                <!-- 基础模块 -->
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-graph</module>
+                <module>whalex-dat-sql-to-dsl</module>
+                <module>whalex-dat-sql</module>
+                <!-- mysql-->
+                <module>whalex-dat-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-gbase</module>
+                <!-- mpp -->
+                <module>whalex-dat-mpp</module>
+                <module>whalex-dat-mpp/whalex-db-kingbase-kingbasees</module>
+                <module>whalex-dat-mpp/whalex-db-h3c-vertica</module>
+                <module>whalex-dat-mpp/whalex-db-highgo-highgodb</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>mongodb</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-mongo-3x</module>
+                <module>whalex-dat-mongo-3x/whalex-db-meiya-mongo</module>
+                <module>whalex-dat-mongo-4x</module>
+                <module>whalex-dat-mongo-4x/whalex-db-meiya-mongo-4x</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>solr</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>mpp</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-mpp</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-postgre</module>
+                <module>whalex-dat-mpp/whalex-db-meiya-greenplum</module>
+                <module>whalex-dat-mpp/whalex-db-kingbase-kingbasees</module>
+                <module>whalex-dat-mpp/whalex-db-h3c-vertica</module>
+                <module>whalex-dat-mpp/whalex-db-highgo-highgodb</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>hbase-1x</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-hbase-1x</module>
+                <module>whalex-dat-hbase-1x/whalex-db-meiya-hbase-1.3.1</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>es-6x</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-es-6x</module>
+                <module>whalex-dat-es-6x/whalex-db-meiya-es-6x</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>hive</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-hive</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-310</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-121</module>
+                <module>whalex-dat-hive/whalex-db-meiya-hive-211</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>hbase-2x</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-hbase-2x</module>
+                <module>whalex-dat-hbase-2x/whalex-db-meiya-hbase-2.0.0</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>es-7x</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-es-7x</module>
+                <module>whalex-dat-es-7x/whalex-db-meiya-es-7x</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>hadoop</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-filesystem</module>
+                <module>whalex-dat-hadoop</module>
+                <module>whalex-dat-hadoop/whalex-db-meiya-hadoop</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>redis</id>
+            <modules>
+                <module>whalex-dat-cache</module>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-redis</module>
+                <module>whalex-dat-redis/whalex-db-meiya-redis</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>kafka</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-kafka</module>
+                <module>whalex-dat-kafka/whalex-db-meiya-kafka</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>mysql</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-mysql</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-tidb</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-doris</module>
+                <module>whalex-dat-mysql/whalex-db-meiya-gbase</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>neo4j</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-db-meiya-neo4j</module>
+            </modules>
+        </profile>
+
+
+        <profile>
+            <id>s3</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-s3</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>gremlin</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-tinkerpop-gremlin</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-janusgraph</module>
+                <module>whalex-dat-tinkerpop-gremlin/whalex-db-meiya-gremlin-client</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>oracle</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-oracle</module>
+                <module>whalex-dat-oracle/whalex-db-meiya-oracle</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>dm</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-dm</module>
+                <module>whalex-dat-dm/whalex-db-meiya-dm-7</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>clickhouse</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-dat-calcite-extends</module>
+                <module>whalex-db-rdbms</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-db-clickhouse</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>nebulagraph</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-graph</module>
+                <module>whalex-db-meiya-nebulagraph</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>ftp</id>
+            <modules>
+                <module>whalex-db-abstract</module>
+                <module>whalex-data-common</module>
+                <module>whalex-data-modal</module>
+                <module>whalex-dat-filesystem</module>
+                <module>whalex-dat-ftp</module>
+                <module>whalex-dat-ftp/whalex-db-meiya-ftp</module>
+            </modules>
+        </profile>
+
+
+    </profiles>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

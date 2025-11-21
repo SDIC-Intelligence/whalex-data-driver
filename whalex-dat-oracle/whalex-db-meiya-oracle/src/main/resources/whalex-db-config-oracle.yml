@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.OracleServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.OracleConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.OracleParamUtil

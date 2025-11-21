@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.bigtable.HBaseServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.bigtable.HBaseConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.bigtable.HBaseParamUtil

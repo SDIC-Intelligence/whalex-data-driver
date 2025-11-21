@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.Dm7ServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.Dm7ConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.Dm7ParamUtil

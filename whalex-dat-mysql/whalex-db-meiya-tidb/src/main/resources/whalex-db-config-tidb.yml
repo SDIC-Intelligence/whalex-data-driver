@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.TidbServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.TidbConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.TidbParamUtil

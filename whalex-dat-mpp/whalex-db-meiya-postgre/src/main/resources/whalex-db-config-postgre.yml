@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.PostGreServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.PostGreConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.PostGreParamUtil

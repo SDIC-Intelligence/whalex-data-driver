@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.graph.JanusGraphServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.graph.JanusGraphConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.graph.JanusGraphParamUtil

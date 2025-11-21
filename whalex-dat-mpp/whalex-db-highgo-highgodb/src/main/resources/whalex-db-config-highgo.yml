@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.HighGoServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.HighGoConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.HighGoParamUtil

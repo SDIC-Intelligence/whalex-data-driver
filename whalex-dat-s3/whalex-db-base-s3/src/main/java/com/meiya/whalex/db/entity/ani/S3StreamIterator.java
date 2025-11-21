@@ -1,0 +1,43 @@
+package com.meiya.whalex.db.entity.ani;
+
+import com.meiya.whalex.db.stream.StreamIterator;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class S3StreamIterator implements StreamIterator<byte[]> {
+
+    private InputStream inputStream;
+
+    private int len;
+
+    private byte[] data = new byte[4096];
+
+    public S3StreamIterator(InputStream inputStream) {
+        this.inputStream = inputStream;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return len != -1;
+    }
+
+    @Override
+    public byte[] next() {
+        try {
+            len = inputStream.read(data, 0, data.length);
+            if(len == -1) {
+                inputStream.close();
+                return null;
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return data;
+    }
+
+    @Override
+    public int getDataLength() {
+        return len;
+    }
+}

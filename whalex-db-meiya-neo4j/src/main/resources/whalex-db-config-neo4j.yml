@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.graph.Neo4jServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.graph.Neo4jConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.graph.Neo4jParamUtil

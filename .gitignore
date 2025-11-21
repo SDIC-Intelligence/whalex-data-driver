@@ -1,0 +1,52 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+libraries/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+/.idea/
+!/.idea/
+/.idea/
+/.idea/
+
+!/whalex-data-driver.iml
+!/.idea/
+!/.idea/
+!/.idea/vcs.xml
+!/.idea/inspectionProfiles/
+!/.idea/inspectionProfiles/profiles_settings.xml
+!/.idea/.gitignore
+!/.idea/workspace.xml
+!/.idea/inspectionProfiles/Project_Default.xml
+!/.idea/encodings.xml
+!/.idea/misc.xml
+!/.idea/compiler.xml
+!/whalex-data-driver.iml
+/.idea/
+/whalex-data-driver.iml

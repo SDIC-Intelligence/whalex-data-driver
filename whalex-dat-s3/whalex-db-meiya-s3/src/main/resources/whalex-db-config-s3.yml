@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.ani.S3ServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.ani.S3ConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.ani.S3ParamUtil

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>whalex-data-driver</artifactId>
+        <groupId>com.meiya.whalex</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>whalex-db-meiya-neo4j</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <gremlin.version>3.6.2</gremlin.version>
+    </properties>
+
+    <dependencies>
+        <!-- 基础依赖：抽象层定义模块 -->
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-db-abstract</artifactId>
+            <version>${whalex-db-abstract.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>4.4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.meiya.whalex</groupId>
+            <artifactId>whalex-dat-graph</artifactId>
+            <version>${whalex-db-abstract.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>gremlin-core</artifactId>
+                    <groupId>org.apache.tinkerpop</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>gremlin-driver</artifactId>
+                    <groupId>org.apache.tinkerpop</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-core</artifactId>
+            <version>${gremlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-driver</artifactId>
+            <version>${gremlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.opencypher.gremlin</groupId>
+            <artifactId>translation</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+
+    </dependencies>
+</project>

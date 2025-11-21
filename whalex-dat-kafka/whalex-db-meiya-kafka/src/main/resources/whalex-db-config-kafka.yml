@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.stream.KafkaServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.stream.KafkaConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.stream.KafkaParamUtil

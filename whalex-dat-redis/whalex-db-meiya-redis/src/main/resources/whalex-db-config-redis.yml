@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.cache.RedisServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.cache.RedisConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.cache.RedisParamUtil

@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.document.MongoServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.document.MongoConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.document.MongoParamUtil

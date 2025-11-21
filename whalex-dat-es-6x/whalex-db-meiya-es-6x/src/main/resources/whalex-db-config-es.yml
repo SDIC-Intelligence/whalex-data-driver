@@ -1,0 +1,4 @@
+whalex:
+  module: com.meiya.whalex.db.module.lucene.EsServiceImpl
+  helper: com.meiya.whalex.db.util.helper.impl.lucene.EsConfigHelper
+  param: com.meiya.whalex.db.util.param.impl.lucene.EsParamUtil
