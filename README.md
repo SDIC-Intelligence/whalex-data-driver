@@ -3,11 +3,11 @@
 <p align="center"></p>
 
 <p align="center">
-  <a href="https://github.com/SDIC-Intelligence/whalex-dat-driver/stargazers">
-    <img src="https://img.shields.io/github/stars/SDIC-Intelligence/whalex-dat-driver.svg" alt="GitHub Stars">
+  <a href="https://github.com/SDIC-Intelligence/whalex-data-driver/stargazers">
+    <img src="https://img.shields.io/github/stars/SDIC-Intelligence/whalex-data-driver.svg" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/SDIC-Intelligence/whalex-dat-driver/releases">
-    <img src="https://img.shields.io/github/release/SDIC-Intelligence/whalex-dat-driver.svg" alt="GitHub Release">
+  <a href="https://github.com/SDIC-Intelligence/whalex-data-driver/releases">
+    <img src="https://img.shields.io/github/release/SDIC-Intelligence/whalex-data-driver.svg" alt="GitHub Release">
   </a>
   <a href="https://opensource.org/licenses/Apache-2.0">
     <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License">
@@ -16,7 +16,7 @@
 
 ## 项目简介
 
-WhaleX DAT 数据驱动是一个面向多种数据源的统一驱动框架，支持包括关系型数据库、NoSQL数据库、大数据平台、图数据库等多种数据存储系统。通过统一的API接口，简化了不同数据源的操作复杂度，提供了高性能、高可用的数据访问能力。
+WhaleX DAT 数据驱动（whalex-data-driver）是一个面向多种数据源的统一驱动框架，支持包括关系型数据库、NoSQL数据库、大数据平台、图数据库等多种数据存储系统。通过统一的API接口，简化了不同数据源的操作复杂度，提供了高性能、高可用的数据访问能力。
 
 ## 支持的数据源
 
@@ -45,8 +45,8 @@ WhaleX DAT 数据驱动是一个面向多种数据源的统一驱动框架，支
 ### 克隆项目
 
 ```bash
-git clone https://github.com/SDIC-Intelligence/whalex-dat-driver.git
-cd whalex-dat-driver
+git clone https://github.com/SDIC-Intelligence/whalex-data-driver.git
+cd whalex-data-driver
 ```
 
 ### 构建项目
@@ -69,7 +69,7 @@ mvn clean install -P mysql
 ## 项目结构
 
 ```
-whalex-dat-driver/
+whalex-data-driver/
 ├── whalex-db-abstract/           # 抽象层定义模块
 ├── whalex-data-common/           # 公共工具类模块
 ├── whalex-data-modal/            # 数据模型模块
@@ -169,7 +169,7 @@ mvn verify
 
 - 项目维护者: SDIC Intelligence团队
 - 邮箱: qkos@300188.cn
-- GitHub Issues: [项目问题跟踪](https://github.com/SDIC-Intelligence/whalex-dat-driver/issues)
+- GitHub Issues: [项目问题跟踪](https://github.com/SDIC-Intelligence/whalex-data-driver/issues)
 
 ## 致谢
 
