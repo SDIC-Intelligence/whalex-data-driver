@@ -4,22 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>whalex-dat-mysql</artifactId>
-        <groupId>com.meiya.whalex</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>cn.qkos.whalex</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.meiya.whalex</groupId>
+    <groupId>cn.qkos.whalex</groupId>
     <artifactId>whalex-db-meiya-mysql</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>whalex-db-meiya-mysql</name>
     <description>云平台-底层 mysql 服务模块（美亚云）</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.meiya.whalex</groupId>
+            <groupId>cn.qkos.whalex</groupId>
             <artifactId>whalex-db-base-mysql</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
 
         <dependency>

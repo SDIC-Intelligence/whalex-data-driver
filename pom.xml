@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.meiya.whalex</groupId>
+    <groupId>cn.qkos.whalex</groupId>
     <artifactId>whalex-data-driver</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>whalex-data-driver</name>
     <description>whaleX 数据驱动</description>
@@ -21,11 +21,11 @@
 <!--        <skipTests>true</skipTests>-->
 
         <!-- 版本管理 -->
-        <whalex-data-common.version>0.0.1-SNAPSHOT</whalex-data-common.version>
-        <whalex-data-modal.version>0.0.1-SNAPSHOT</whalex-data-modal.version>
-        <whalex-db-abstract.version>0.0.1-SNAPSHOT</whalex-db-abstract.version>
-        <whalex-db-rdbms.version>0.0.1-SNAPSHOT</whalex-db-rdbms.version>
-        <whalex-dat-graph.version>0.0.1-SNAPSHOT</whalex-dat-graph.version>
+        <whalex-data-common.version>1.0.0</whalex-data-common.version>
+        <whalex-data-modal.version>1.0.0</whalex-data-modal.version>
+        <whalex-db-abstract.version>1.0.0</whalex-db-abstract.version>
+        <whalex-db-rdbms.version>1.0.0</whalex-db-rdbms.version>
+        <whalex-dat-graph.version>1.0.0</whalex-dat-graph.version>
     </properties>
 
     <profiles>
