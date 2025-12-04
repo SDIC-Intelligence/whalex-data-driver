@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>whalex-dat-kafka</artifactId>
-        <groupId>com.meiya.whalex</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>cn.qkos.whalex</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>whalex-db-base-kafka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>

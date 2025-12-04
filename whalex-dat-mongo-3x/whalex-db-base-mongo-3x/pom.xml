@@ -6,15 +6,15 @@
     <!-- 父级依赖 -->
     <parent>
         <artifactId>whalex-dat-mongo-3x</artifactId>
-        <groupId>com.meiya.whalex</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>cn.qkos.whalex</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 工程定义 -->
-    <groupId>com.meiya.whalex</groupId>
+    <groupId>cn.qkos.whalex</groupId>
     <artifactId>whalex-db-base-mongo-3x</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>whalex-db-base-mongo</name>
     <description>云平台-底层服务模块</description>
 

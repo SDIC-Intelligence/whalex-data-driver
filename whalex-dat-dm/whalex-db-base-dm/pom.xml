@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>whalex-dat-dm</artifactId>
-        <groupId>com.meiya.whalex</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>cn.qkos.whalex</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,7 +18,7 @@
             <version>1.7</version>
         </dependency>
         <dependency>
-            <groupId>com.meiya.whalex</groupId>
+            <groupId>cn.qkos.whalex</groupId>
             <artifactId>whalex-db-rdbms</artifactId>
             <version>${whalex-db-rdbms.version}</version>
         </dependency>
