@@ -1,4 +1,4 @@
-# WhaleX DAT 数据驱动A
+# WhaleX DAT 数据驱动
 
 <p align="center"></p>
 
